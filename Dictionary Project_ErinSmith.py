@@ -1,43 +1,35 @@
 #Erin Smith -
-#Dictionaary Project 9/17/18
+#Dictionary Project 9/17/18
 
-cakes = []
-cupcakes = []
-pastries = []
-orders = cakes + cupcakes + pastries
-order = input("Would you like to place an order?: ")
+def make_cake(c_id,size,shape,flavor):
+    cake = {
+        'c_id' : cake_id,
+        'size' : size,
+        'shape' : shape,
+        'flavor' : flavor
+        }
+    return cake
 
+def make_customer(c_id,name):
+    customer = {
+        'c_id' : cake_id,
+        'name' : name
+        }
+    return customer
 
-if order == "no":
-    print("Thank you, Have a nice day!")
-else:
-    answer = input("For a cake use the first function, for a cupcake use the second function, and for a pastry use the third function.")
-    while answer == "yes":  
-        def first(shape,size,flavor):
-            cakes = {
-                'shape' : shape,
-                'size' : size,
-                'flavor' : flavor
-                }
-            cakes.append(cakes)
-            return "Your order %s has been placed" % cakes
+cake_id = 0
 
-        def second(size,flavor,frosting):
-            cupcakes = {
-                'size' : size,
-                'flavor' : flavor,
-                'frosting' : frosting
-                }
-            cupcakes.append(cupcakes)
-            return "Your order %s has been placed" % cupcakes
-
-        def third(name,flavor,topping):
-            pastry = {
-                'name' : name,
-               'flavor' : flavor,
-                'topping' : topping
-                }
-            pastries.append(pastry)
-            return "Your order 5s has been placed" % pastry
-
-#it isn't letting the user input an order
+while True:
+    user_input = input("Would you like to order a [c]ake,[p]ickup or [e]xit? ")
+    if user_input == "c":
+        order_name = input("What is the name for the order? ")
+        customer(name).append(order_name)
+        cake_id = cake_id + 1
+        cake_size = input("What size would you like? ")
+        cake_shape = input("What shape of cake would you like? ")
+        cake_flavor = input("What flavor of cake would you like? ")
+    elif user_input == "p":
+        pass
+    elif user_input == "e":
+        print("Have a nice day!")
+        break
