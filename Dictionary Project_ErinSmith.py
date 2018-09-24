@@ -1,8 +1,8 @@
-#Erin Smith -
-#Dictionary Project 9/17/18
+#Erin Smith - Dictionary Project
+#9/17/18- 9/24/18
 
 order =[]
-def make_cake(c_id,size,shape,flavor):
+def make_cake(cake_id,size,shape,flavor):
     cake = {
         'c_id' : cake_id,
         'size' : size,
@@ -11,7 +11,7 @@ def make_cake(c_id,size,shape,flavor):
         }
     return cake
 
-def make_customer(c_id,name):
+def make_customer(cake_id,name):
     customer = {
         'c_id' : cake_id,
         'name' : name
@@ -23,15 +23,14 @@ cake_id = 0
 while True:
     user_input = input("Would you like to order a [c]ake,[p]ickup or [e]xit? ")
     if user_input == "c":
-        order_name = input("What is the name for the order? ")
-        order_name == make_customer(cake_id,'name')
+        order_name = input("What is the name for the customer order? ")
+        cust = make_customer(cake_id, order_name)
         cake_id = cake_id + 1
         order_size = input("What size would you like? ")
-        order_size == make_cake('size')
         order_shape = input("What shape of cake would you like? ")
-        order_shape == make_cake('shape')
         order_flavor = input("What flavor of cake would you like? ")
-        order_flavor == make_cake('flavor')
+        whole = make_cake(cake_id, order_size, order_shape, order_flavor)
+        print("Your order has been placed, thank you!")
     elif user_input == "p":
         pass
     elif user_input == "e":
